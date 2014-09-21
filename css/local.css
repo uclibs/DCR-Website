@@ -2,12 +2,14 @@
 /* CSS Document */
 
 .btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary, .btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
-	border-color: #000000
+	/*border-color: #000000*/
+	border: none
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
 	background-color: #000000;
 }
+
 
 #navbarCollapse a:hover, #navbarCollapse a:focus, .pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus {
 	color: #000000 !important;
@@ -22,30 +24,54 @@
 	float:left;
 	padding: 20px;
 }
-@media (max-width:380px) {
+@media (max-width:400px) {
+	#unitName {
+		width:10px;
+	}
+}
+
+@media (max-width:768px) {
 	a.navbar-brand {
 		width:78%;
 	}
-}
-@media (max-width:767px) {
+	.carousel, .carousel .item {
+		height: 500px !important;
+	}
 	.small, #ucLogo {
 		display:none;
+	}
+	#unitName {
+		width: 300px;
 	}
 	#navbarCollapse {
 		padding-top:10px;
 		margin-top:15px;
 	}
 }
-@media (min-width:768px) {
+@media (min-width:769px) {
 	.navbar-brand {
 		font-size: 36px;
 		line-height: 38px;
-	}	
+	}
+	.carousel, .carousel .item {
+	  height: 600px !important;
+	}
+		#unitName {
+		width: 400px;
+	}
 }
 @media (min-width:992px) {
-
+.carousel, .carousel .item{
+	  height: 700px !important;
+	}
+	#unitName {
+		width: 400px;
+	}
 }
 @media (min-width:1200px) {
+	.carousel, .carousel .item {
+	  height: 843px !important;
+	}
 
 }
 
