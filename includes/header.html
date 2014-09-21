@@ -1,0 +1,45 @@
+<nav class="navbar navbar-default" role="navigation"> 
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+    <a href="http://uc.edu"><img src="https://www.uc.edu/ucomm/branding/logos_graphics/_jcr_content/MainContent/image_5/image.img.gif/1288081098274.gif" id="ucLogo" /></a> <a href="/index.html" class="navbar-brand"><img src="/images/unitName.png" alt="Digital Collections and Repositories" class="hidden-xs" /><span class="hidden-sm hidden-md hidden-lg">Digital Collections and Repositories</span></a>
+    <!--<div class="navbar-brand small">Repositories are part of the <a href="http://research.uc.edu">UC Research Hub</a>.</div>--> 
+  </div>
+  <!-- Collection of nav links, forms, and other content for toggling -->
+  <div id="navbarCollapse" class="collapse navbar-collapse navbar-right">
+    <ul class="nav nav-pills">
+      <!--<li class="active"><a href="#">Home</a></li>-->
+      <li><a href="#">Collections</a></li>
+      <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Repositories <span class="caret"></span> </a>
+        <ul class="dropdown-menu">
+          <li><a href="https://drc.libraries.uc.edu">Digital Resoure Commons</a></li>
+          <li><a href="http://digproj.libraries.uc.edu:8180/luna/servlet/allCollections">LUNA Image Repository</a></li>
+          <li><a href="https://scholar.uc.edu">Scholar@UC</a></li>
+        </ul>
+      <li><a href="#">Exhibitions</a></li>
+      <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> About <span class="caret"></span> </a>
+        <ul class="dropdown-menu">
+          <li><a href="#">About</a></li>
+          <li><a href="/about/staff.html">Staff</a></li>
+          <li><a href="https://libapps.libraries.uc.edu/liblog/category/digital-collections/">News</a></li>
+          <li><a href="/about/terms.html">Terms of Use</a></li>
+          <li role="presentation" class="divider"></li>
+          <li><a href="https://libraries.uc.edu">UC Libraries</a></li>
+          <li><a href="https://libraries.uc.edu/special-collections.html">UCL Special Collections</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Help</a></li>
+    </ul>
+    <form class="navbar-form navbar-right" role="search" name="repoSearch" onSubmit="return dosearch();">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search" name="searchterms">
+        <select name="sengines" class="form-control" id="sengines">
+          <option value="https://drc.libraries.uc.edu/search?submit=Go&query=">Digital Resource Commons</option>
+          <option value="http://digproj.libraries.uc.edu:8180/luna/servlet/view/search?QuickSearchA=QuickSearchA&search=Search&q=">Luna Image Repository</option>
+          <option value="#">This Website</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-default btn-primary">Submit</button>
+    </form>
+  </div>
+</nav>

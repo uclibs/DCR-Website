@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary, .btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
+	border-color: #000000
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+	background-color: #000000;
+}
+
+#navbarCollapse a:hover, #navbarCollapse a:focus, .pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus {
+	color: #000000 !important;
+}
+.small {
+	font-size: 16px !important;
+}
+.navbar {
+	border: none;
+}
+#ucLogo {
+	float:left;
+	padding: 20px;
+}
+@media (max-width:380px) {
+	a.navbar-brand {
+		width:78%;
+	}
+}
+@media (max-width:767px) {
+	.small, #ucLogo {
+		display:none;
+	}
+	#navbarCollapse {
+		padding-top:10px;
+		margin-top:15px;
+	}
+}
+@media (min-width:768px) {
+	.navbar-brand {
+		font-size: 36px;
+		line-height: 38px;
+	}	
+}
+@media (min-width:992px) {
+
+}
+@media (min-width:1200px) {
+
+}
+
+
+
+
