@@ -68,13 +68,16 @@
 		width: 400px;
 	}
 }
+@media (min-width:1100px) {
+	#unitName {
+		width: 450px;
+	}
+}
 @media (min-width:1200px) {
 	.carousel, .carousel .item {
 	  height: 843px !important;
 	}
-
+	#unitName {
+		width: 450px;
+	}
 }
-
-
-
-
