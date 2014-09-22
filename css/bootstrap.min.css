@@ -4689,6 +4689,8 @@ button.close {
 	position: relative;
 	overflow: hidden;
 	width: 80%;
+	max-width: 1500px;
+	max-height: 825px;
 	margin: auto;
 }
 .carousel-inner>.item {
