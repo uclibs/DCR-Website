@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Digital Collections | Digital Collections and Repositories | UC Libraries</title>
+	<!--#include virtual="/includes/style.html"-->
+	<link rel="stylesheet" href="css/style_good.css" media="all">
+</head>
+<body>
+
+<!--#include virtual="/includes/globalNav.html"-->
+
+<!--#include virtual="/includes/header.html"-->
+
+<div class="container text-center fade-in">
+	<h2>Digital Collections</h2>
+
+	<!-- Nav tabs -->
+	<ul class="nav nav-tabs nav-justified" role="tablist">
+		<li role="presentation" class="active"><a href="#library" aria-controls="library" role="tab" onclick="return false;">Library</a></li>
+		<li role="presentation"><a href="#subject" aria-controls="subject" role="tab" onclick="return false;">Subject</a></li>
+		<li role="presentation"><a href="#format" aria-controls="format" role="tab" onclick="return false;">Format</a></li>
+	</ul>
+
+	<!-- Tab panes -->
+	<div class="tab-content" align="center">
+		<div role="tabpanel" class="tab-pane active" id="library">
+			<div class="filters button-group filters-button-group1" id="libdiv">
+			<!--<div class="filters button-group filters-button-group" data-filter-group="library"></div> -->
+				<button class="button btn btn-default btn-primary is-checked show" data-filter="*" id="show1">Show all</button>
+				<button class="button btn btn-default btn-primary" data-filter=".ARB">Archives & Rare Books Library</button>
+				<button class="button btn btn-default btn-primary" data-filter=".CCM">CCM Library</button>
+				<button class="button btn btn-default btn-primary" data-filter=".DAAP">DAAP Library</button>
+				<button class="button btn btn-default btn-primary" data-filter=".LANGSAM">Langsam Library</button>
+				<button class="button btn btn-default btn-primary" data-filter=".SEL">Science & Engineering Libraries</button>
+				<button class="button btn btn-default btn-primary" data-filter=".WINKLER">Winkler Center</button>
+			</div>
+			<!--#include virtual="all.html"-->
+		</div>
+		<div role="tabpanel" class="tab-pane" id="subject">
+			<div class="filters button-group filters-button-group1" id="subdiv">
+			<!--<div class="filters button-group filters-button-group" data-filter-group="subject"></div> -->
+				<button class="button btn btn-default btn-primary is-checked" data-filter="*" id="show2">Show all</button>
+				<button class="button btn btn-default btn-primary" data-filter=".AA">Art & Architecture</button>
+				<button class="button btn btn-default btn-primary" data-filter=".CH">Cincinnati History</button>
+				<button class="button btn btn-default btn-primary" data-filter=".LIT">Literature</button>
+				<button class="button btn btn-default btn-primary" data-filter=".MED">Medicine</button>
+				<button class="button btn btn-default btn-primary" data-filter=".MUSIC">Music</button>
+				<button class="button btn btn-default btn-primary" data-filter=".SCI">Science</button>
+				<button class="button btn btn-default btn-primary" data-filter=".UCH">UC History</button>
+				<button class="button btn btn-default btn-primary" data-filter=".WA">Western Americana</button>
+			</div>
+			<!--#include virtual="all.html"-->
+		</div>
+		<div role="tabpanel" class="tab-pane" id="format">
+			<div class="filters button-group filters-button-group1" id="fordiv">
+			<!--<div class="filters button-group filters-button-group" data-filter-group="format"></div>-->
+				<button class="button btn btn-default btn-primary is-checked show" data-filter="*"  id="show3">Show All</button>
+				<button class="button btn btn-default btn-primary" data-filter=".IMAGE">Images</button>
+				<button class="button btn btn-default btn-primary" data-filter=".MAN">Manuscripts</button>
+				<button class="button btn btn-default btn-primary" data-filter=".MAP">Maps</button>
+				<button class="button btn btn-default btn-primary" data-filter=".PERS">Periodicals</button>
+				<button class="button btn btn-default btn-primary" data-filter=".RECS">Records</button>
+				<button class="button btn btn-default btn-primary" data-filter=".VIDEO">Video</button>
+			</div>
+			<!--#include virtual="all.html"-->
+		</div>
+	</div>
+	<div style="padding-bottom: 20px"></div>
+	<!--#include virtual="/includes/footer.html"-->
+	<!--End Container-->
+</div>
+
+	<!--#include virtual="/includes/scripts.html"-->
+	<script src="js/isotope.pkgd.min.js"></script>
+	<script>
+		$( document ).ready(function() {
+			// init Isotope
+			var $grid = $('.grid1').isotope({
+				itemSelector: '.grid-image-item',
+				layoutMode: 'fitRows'
+			});
+			$grid.isotope('shuffle');
+
+			// filter functions
+			var filterFns = {
+				// show if number is greater than 50
+				numberGreaterThan50: function() {
+					var number = $(this).find('.number').text();
+					return parseInt( number, 10 ) > 50;
+				},
+				// show if name ends with -ium
+				ium: function() {
+					var name = $(this).find('.name').text();
+					return name.match( /ium$/ );
+				}
+			};
+
+			// bind filter button click
+			$('.filters-button-group1').on( 'click', 'button', function() {
+				var filterValue = $( this ).attr('data-filter');
+				// use filterFn if matches value
+				filterValue = filterFns[ filterValue ] || filterValue;
+				$grid.isotope({ filter: filterValue });
+			});
+
+			// change is-checked class on buttons
+			$('.button-group').each( function( i, buttonGroup ) {
+				var $buttonGroup = $( buttonGroup );
+				$buttonGroup.on( 'click', 'button', function() {
+					$buttonGroup.find('.is-checked').removeClass('is-checked');
+					$( this ).addClass('is-checked');
+				});
+			});
+
+			// remove filters and show all in clicking a new tab
+			$(".nav-tabs a").click(function(){
+				$(this).tab('show');
+				$grid.isotope({ filter: '*' }) // not updating filter button selection, clicking on a filter introduces the double fly-in
+				$grid.isotope('shuffle');
+	 		});
+	 });
+	</script>
+</body>
+</html>
