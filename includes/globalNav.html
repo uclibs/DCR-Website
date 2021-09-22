@@ -1,193 +1,44 @@
 <!-- Global Nav Starts, copied from UC main on 23 June 2014 -->
+<!--<script src="/js/jquery-3.5.1.min.js"></script>-->
 <div id="header">
-<div class="GlobalNavResponsive section">
-  <div class="navbar navbar-inverse globalnav" role="navigation" id="ucNav">
-    <div class="navbar-header visible-xs">
-      <button type="button" class="nav-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-      	<span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <!-- responsive header DD -->
-     <button type="button" class="toggle-topnav navbar-toggle" data-toggle="collapse" data-target=".navbar-topnav-collapse">
-      	<span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-     </button>
-      <!--<button type="button" class="search-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-search-collapse">
-      	<span class="glyphicon glyphicon-search"></span>
-       </button>-->
-      <a class="navbar-brand visible-xs" href="http://uc.edu" target="_top">University of Cincinnati</a>
-    </div>
-    <div class="">
-      <ul class="nav navbar-nav collapse navbar-collapse navbar-ex1-collapse">
-        <li><a class="NavLink" href="http://www.uc.edu?from=globalnav">UC Home</a></li>
-        <li><a class="NavLink" href="http://www.uc.edu/visitors.html?from=globalnav">Visit UC</a></li>
-        <li><a class="NavLink" href="http://www.uc.edu/foundation.html?from=globalnav">Support&nbsp;UC&nbsp;<span class="glyphicon glyphicon-play"></span></a></li>
-        <li><a class="NavLink" href="https://ucdirectory.uc.edu/?from=globalnav">Directories</a></li>
-        <li class="dropdown"> <a href="#" class="dropdown-toggle NavLink" data-toggle="dropdown">UC Tools <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li class="ToolDropItem"><a class="ToolDropLink" href="http://blackboard.uc.edu?from=uctools">Blackboard</a></li>
-            <li class="ToolDropItem"><a class="ToolDropLink" href="https://bblearn.uc.edu?from=uctools">BbLearn</a></li>
-            <li class="ToolDropItem"><a class="ToolDropLink" href="http://onestop.uc.edu?from=uctools">OneStop</a></li>
-            <li class="ToolDropItem"><a class="ToolDropLink" href="https://mail.uc.edu?from=uctools">Student Email</a></li>
-            <li class="ToolDropItem"><a class="ToolDropLink" href="https://ucowa.uc.edu/?from=uctools">UCMail</a></li>
-            <li class="ToolDropItem"><a class="ToolDropLink" href="https://ucfilespace.uc.edu/?from=uctools">UCFileSpace</a></li>
-            <li class="ToolDropItem"><a class="ToolDropLink" href="https://www.ucflex.uc.edu/">UC Flex/ESS</a></li>
-            <li class="ToolDropItem"><a class="ToolDropLink" href="http://www.uc.edu/pss/?from=uctools">Password Help</a></li>
-            <li class="ToolDropItem"><a class="ToolDropLink" href="https://sslvpn.uc.edu?from=uctools">UC VPN</a></li>
-          </ul>
-        </li>
-      </ul>
-      
-       <!--<form method="get" class="navbar-form navbar-right collapse navbar-collapse navbar-search-collapse" action="http://search.uc.edu/search">
-        <div class="form-group">
-           <label class="sr-only" for="q">Query String</label><input type="text" class="search-query form-control gsaSearch span2" name="q" maxlength="256" id="q" placeholder="Search UC" />
+    <div class="GlobalNavResponsive section">
+        <div class="navbar navbar-inverse globalnav" role="navigation" id="ucNav">
+            <div class="navbar-header visible-xs">
+                <button type="button" class="nav-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse" alt="Menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <button type="button" class="toggle-topnav navbar-toggle" data-toggle="collapse" data-target=".navbar-topnav-collapse" alt="Toggle Menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand visible-xs" href="http://uc.edu" target="_top">University of Cincinnati</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav collapse navbar-collapse navbar-ex1-collapse">
+                    <li><a class="NavLink" href="http://www.uc.edu?from=globalnav">UC Home</a></li>
+                    <li><a class="NavLink" href="http://www.uc.edu/visitors.html?from=globalnav">Visit UC</a></li>
+                    <li><a class="NavLink" href="http://www.uc.edu/foundation.html?from=globalnav">Support&nbsp;UC&nbsp;<span class="glyphicon glyphicon-play"></span></a></li>
+                    <li><a class="NavLink" href="https://ucdirectory.uc.edu/?from=globalnav">Directories</a></li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle NavLink" data-toggle="dropdown">UC Tools <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="ToolDropItem"><a class="ToolDropLink" href="http://blackboard.uc.edu?from=uctools">Blackboard</a></li>
+                            <li class="ToolDropItem"><a class="ToolDropLink" href="https://bblearn.uc.edu?from=uctools">BbLearn</a></li>
+                            <li class="ToolDropItem"><a class="ToolDropLink" href="http://onestop.uc.edu?from=uctools">OneStop</a></li>
+                            <li class="ToolDropItem"><a class="ToolDropLink" href="https://mail.uc.edu?from=uctools">Student Email</a></li>
+                            <li class="ToolDropItem"><a class="ToolDropLink" href="https://ucowa.uc.edu/?from=uctools">UCMail</a></li>
+                            <li class="ToolDropItem"><a class="ToolDropLink" href="https://ucfilespace.uc.edu/?from=uctools">UCFileSpace</a></li>
+                            <li class="ToolDropItem"><a class="ToolDropLink" href="https://www.ucflex.uc.edu/">UC Flex/ESS</a></li>
+                            <li class="ToolDropItem"><a class="ToolDropLink" href="http://www.uc.edu/pss/?from=uctools">Password Help</a></li>
+                            <li class="ToolDropItem"><a class="ToolDropLink" href="https://sslvpn.uc.edu?from=uctools">UC VPN</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <input type="submit" name="btnG" value="Go" class="btn btn-danger" />
-        <input type="hidden" name="site" value="ucmain" />
-        <input type="hidden" name="client" value="ucmain_frontend" />
-        <input type="hidden" name="output" value="xml_no_dtd" />
-        <input type="hidden" name="proxystylesheet" value="ucmain_frontend" />
-        <input type="hidden" name="oe" value="utf8" />
-        <input type="hidden" name="ie" value="utf8" />
-        <script type="text/javascript">
-        
-            var peopleAction = "http://ucdirectory.uc.edu/PeopleSearch.asp";
-            var searchAction = "http://search.uc.edu/search";
-            
-            
-    
-            jQuery("input[name='site']").val(jQuery("input[name='site']").val().toUpperCase());
-        
-            function setAction(action,method)
-            {
-                jQuery(".navbar-form ").attr("action",action);
-                jQuery(".navbar-form ").attr("method",method);
-                
-            }
-            function setWatermark(watermark)
-            {
-                jQuery(".gsaSearch").attr("placeholder",watermark);
-            }
-            function setCollection(frontend)
-            {
-                jQuery("input[name='client']").val(frontend + "_frontend");
-                jQuery("input[name='proxystylesheet']").val(frontend + "_frontend");
-                jQuery("input[name='site']").val(frontend.toUpperCase());
-            }
-        
-            
-            var theDiv = jQuery("<ul class='dropdown-menu searchChoice' role='menu' aria-labelledby='dropdownMenu'></ul>");
-            
-    
-            if("" != "") 
-            {
-                theDiv.append("<li><a  href='#' id='dept' class='gsa' _collection='' _watermark=''><b class='icon-search'></b>&nbsp;</a></li>");
-            }
-            
-            theDiv.append("    <li><a href='#' id='mainselector' class='gsa' _collection='ucmain' _watermark='Search UC'><b class='icon-asterisk'></b>&nbsp;Search UC Web</a></li>");
-            theDiv.append("   <li><a  href='#' id='peopleselector' class='people'  _watermark='Last Name, First Name'><b class='icon-user'></b>&nbsp;Search people</a></li>");
-            theDiv.append("    <li><a  href='#' id='noselector' class='close'>&nbsp;close</a></li>");
-    
-            
-            
-            jQuery("body").append(theDiv);
-            theDiv.css("position","absolute");
-    
-            theDiv.css("display","none");
-            
-            
-            
-            jQuery(".searchChoice a").click(function(){
-            
-                
-            
-                theDiv.hide();
-                
-                
-                jQuery(".gsaSearch").focus();
-                if(jQuery(this).hasClass("close"))
-                     return;
-                if(jQuery(this).hasClass("gsa"))
-                {
-                    setCollection(jQuery(this).attr("_collection"));
-                    setAction(searchAction,"get");
-                    jQuery(".gsaSearch").attr("name","q");
-                }
-                if(jQuery(this).hasClass("people"))
-                {
-                    setAction(peopleAction,"post");
-                    jQuery(".gsaSearch").attr("name","formInputBox");
-                    
-                }
-                setWatermark(jQuery(this).attr("_watermark"));
-                //give searchbox focus
-                
-                return false;
-            });   
-            
-        
-            jQuery(".gsaSearch").click(function(){
-            
-                theDiv.slideDown(200);
-                theDiv.css("top",jQuery(".gsaSearch").eq(0).offset().top + 30);
-                theDiv.css("left",jQuery(".gsaSearch").eq(0).offset().left);
-     
-            });
-        
-            jQuery(".gsaSearch").keydown(function(k) {
-            
-                if(k.which != 40)
-                    return;
-            
-                theDiv.slideDown(200);  
-                theDiv.find("a").eq(0).focus(); 
-            });
-        
-        </script>
-        
-        
-    </form>-->
     </div>
-    <!-- /.nav-collapse --> 
-  </div>
-  <!-- /.navbar-inner --> 
-</div>
-</div>
-<script>
-    jQuery(document).ready(function() {
-
-            if(jQuery("#respbanner .theNav").length > 0 || jQuery(".NavLayout .navBase").length > 0 || jQuery(".DropdownNav").length > 0)
-            {
-                if(!jQuery("body").hasClass("NoNav") || jQuery("#respbanner").hasClass("bannerNav") || jQuery("#respbanner").hasClass("navigation"))
-                {   
-                    jQuery("header .GlobalNavResponsive button.toggle-topnav").css("display","block");
-                    jQuery("header .GlobalNavResponsive button.toggle-topnav").addClass("visible-xs");
-                    giveFocus();
-                }
-            }
-    
-            jQuery("#header .GlobalNavResponsive .search-toggle").click(function() {
-                setTimeout("giveFocus()", 1000);
-            
-            });
-            
-            jQuery("#header .toggle-topnav").on("click",function() {
-                    jQuery(".bxSlider").slideToggle(200);
-                    jQuery(".globalBtn").toggle();
-            
-            });
-            
-            function giveFocus()
-            {
-                if(jQuery("header .GlobalNavResponsive .navbar-search-collapse").css("display") == "block")
-                    jQuery("header .GlobalNavResponsive .form-group input").eq(0).focus();
-            }
-    });
-    
-  </script>
-</div>
 </div>
 <!-- Global Nav Ends -->

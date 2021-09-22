@@ -1,61 +1,48 @@
-<nav class="navbar navbar-default" role="navigation"> 
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-    <a href="http://uc.edu"><img src="https://www.uc.edu/ucomm/branding/logos_graphics/_jcr_content/MainContent/image_5/image.img.gif/1288081098274.gif" id="ucLogo" class="hidden-sm hidden-xs hidden-md"/></a> <a href="/index.html" class="navbar-brand"><img src="/images/unitName.png" alt="Digital Collections and Repositories" id="unitName" class="" /><!--<span class="hidden-sm hidden-md hidden-lg">Digital Collections and Repositories</span>--></a>
-    <!--<div class="navbar-brand small">Repositories are part of the <a href="http://research.uc.edu">UC Research Hub</a>.</div>--> 
-  </div>
- 
-  <!-- Collection of nav links, forms, and other content for toggling -->
-  <div id="navbarCollapse" class="collapse navbar-collapse navbar-right">
-     <form class="navbar-form navbar-right" role="search" name="repoSearch" onSubmit="return dosearch();">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search" name="searchterms">
-        <select name="sengines" class="form-control" id="sengines">
-          <option value="https://drc.libraries.uc.edu/search?submit=Go&query=">Digital Resource Commons</option>
-          <option value="http://digproj.libraries.uc.edu:8180/luna/servlet/view/search?QuickSearchA=QuickSearchA&search=Search&q=">LUNA Image And Media Repository</option>
-          <option value="#">This Website</option>
-        </select>
-      </div>
-      <button type="submit" class="btn btn-default btn-primary">Submit</button>
-    </form>
-    <ul class="nav nav-pills">
-      <!--<li class="active"><a href="#">Home</a></li>-->
-      <li><a href="/collections/">Collections</a></li>
-      <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Repositories <span class="caret"></span> </a>
-        <ul class="dropdown-menu">
-          <li><a href="https://drc.libraries.uc.edu">Digital Resoure Commons</a></li>
-          <li><a href="http://digproj.libraries.uc.edu:8180/luna/servlet/allCollections">LUNA Image and Media Repository</a></li>
-          <li><a href="https://scholar.uc.edu">Scholar@UC</a></li>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a href="http://uc.edu"><img src="/images/ucLogo.gif" id="ucLogo" class="hidden-xs hidden-sm" alt="University of Cincinnati Logo" /></a>
+        <a href="/" class="navbar-brand"><img src="/images/unitName2.png" id="unitName" alt="Digital Collections and Repositories @ UC Libraries" /></a>
+    </div>
+
+    <div id="navbarCollapse" class="collapse navbar-collapse navbar-right">
+        <form class="navbar-form navbar-right" role="search" name="repoSearch" onSubmit="return dosearch();">
+            <div class="form-group">
+                <label for="searchterms" style="visibility:hidden;">Search:</label>
+                <input type="text" class="form-control" id="searchterms" placeholder="Search" name="searchterms" alt="Search Index">
+                <select name="sengines" class="form-control" id="sengines" alt="Indexes">
+                    <option value="https://drc.libraries.uc.edu/search?submit=Go&query=" alt="Digital Resource Commons">Digital Resource Commons</option>
+                    <option value="http://digital.libraries.uc.edu/luna/servlet/view/search?QuickSearchA=QuickSearchA&search=Search&q=" alt="LUNA Image And Media Repository">LUNA Image And Media Repository</option>
+                    <option value="https://scholar.uc.edu/catalog?utf8=%E2%9C%93&q=" alt="Scholar@UC">Scholar@UC</option>
+                    <option value="http://search.uc.edu/search?client=libraries_frontend&site=LIBRARIES&output=xml_no_dtd&proxystylesheet=libraries_frontend&ie=UTF-8&oe=UTF-8&as_epq=&as_oq=&as_eq=&lr=&as_occt=any&as_dt=i&as_sitesearch=digital.libraries.uc.edu&sort=&num=10&btnG.x=15&btnG.y=17&btnG=Submit+Search&as_lq=&as_q=" alt="This Website">This Website</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" alt="Submit Search">Search</button>
+        </form>
+        <ul class="nav nav-pills">
+            <li><a href="/collections/">Collections</a></li>
+            <li><a href="/exhibits/">Exhibitions</a></li>
+            <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Repositories <span class="caret"></span> </a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://drc.libraries.uc.edu">Digital Resource Commons</a></li>
+                    <li><a href="http://digital.libraries.uc.edu/luna/servlet/allCollections">LUNA Image and Media Repository</a></li>
+                    <li><a href="https://scholar.uc.edu">Scholar@UC</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> About <span class="caret"></span> </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="https://libapps.libraries.uc.edu/liblog/category/digital-collections/">Blog</a></li>
+                    <li><a href="/about/contact.html">Contact</a></li>
+                    <li><a href="/about/fairUse.html">Fair Use</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> UC Libraries <span class="caret"></span> </a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://libraries.uc.edu">UC Libraries</a></li>
+                    <li><a href="https://libraries.uc.edu/special-collections.html">UC Libraries Special Collections</a></li>
+                </ul>
+            </li>
         </ul>
-      </li>
-      <li><a href="/exhibits/">Exhibitions</a></li>
-      <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> About <span class="caret"></span> </a>
-        <ul class="dropdown-menu">
-          <li><a href="#">About</a></li>
-          <li><a href="https://libapps.libraries.uc.edu/liblog/category/digital-collections/">Blog</a></li>
-          <li><a href="#">Help</a></li>
-          <li><a href="/about/staff.html">Staff</a></li>
-          <li><a href="/about/terms.html">Terms of Use</a></li>
-        </ul>
-      </li>
-      <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> UC Libraries <span class="caret"></span> </a>
-        <ul class="dropdown-menu">
-          <li><a href="https://libraries.uc.edu">UC Libraries</a></li>
-          <li><a href="https://libraries.uc.edu/special-collections.html">UC Libraries Special Collections</a></li>
-        </ul>
-      </li>
-    </ul>
-    <!--<form class="navbar-form" role="search" name="repoSearch" onSubmit="return dosearch();">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search" name="searchterms">
-        <select name="sengines" class="form-control" id="sengines">
-          <option value="https://drc.libraries.uc.edu/search?submit=Go&query=">Digital Resource Commons</option>
-          <option value="http://digproj.libraries.uc.edu:8180/luna/servlet/view/search?QuickSearchA=QuickSearchA&search=Search&q=">Luna Image Repository</option>
-          <option value="#">This Website</option>
-        </select>
-      </div>
-      <button type="submit" class="btn btn-default btn-primary">Submit</button>
-    </form>-->
-  </div>
+    </div>
 </nav>

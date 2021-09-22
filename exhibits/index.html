@@ -1,71 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Online Exhibitions | Digital Collections and Repositories | UC Libraries</title>
-<!--#include virtual="/includes/style.html"-->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Online Exhibitions | Digital Collections and Repositories | UC Libraries</title>
+	<!--#include virtual="/includes/style.html"-->
+	<script src="/js/jquery-2.1.0.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/css/grid.css" media="all">
+	<link rel="canonical" href="http://digital.libraries.uc.edu/exhibits/" />
 </head>
+
 <body>
 
-<!--#include virtual="/includes/globalNav.html"-->
+	<!--#include virtual="/includes/globalNav.html"-->
 
-<!--#include virtual="/includes/header.html"-->
+	<!--#include virtual="/includes/header.html"-->
 
-<div class="container">
-  <div class="row">
-    <h2>Online Exhibitions</h2>
+	<div class="container fade-in">
+		<h2 class="text-center">Online Exhibitions</h2>
 
-    <div class="col-md-3">
-      <div class="sidebar-module">
-          <ol class="list-unstyled">
-    		    <li><a href="#arb">Archives and Rare Books Library</a></li>
-            <li><a href="#winkler">Winkler Center for the History of Health Professions</a></li>
-            <li><a href="#sel">Science and Engineering Libraries</a></li>
-            <li><a href="#ucdp">University of Cincinnati Digital Press</a></li>
-          </ol>
-      </div>
-    </div>
-  	
-   	<div class="col-md-9">
-      <h4 id="arb" style="margin-top:0;">Archives and Rare Books Library</h4>
-      <ul>
-        <li><a href="mathews/">Sublime and Beautiful Mountain Scenery</a></li>
-        <li><a href="mckhall/">A Gathering of Nations</a></li>
-        <li><a href="catlin/catweb.html">Medicine Painter</a></li>
-      </ul>
+		<div class="filters button-group filters-button-group1 text-center cardfilts" id="exhiblibdiv">
+			<!--<div class="filters button-group filters-button-group" data-filter-group="library"></div> -->
+			<button class="button btn btn-default btn-primary is-checked show" data-filter="*" id="show1">Show all</button>
+			<button class="button btn btn-default btn-primary" data-filter=".ARB">Archives & Rare Books Library</button>
+			<button class="button btn btn-default btn-primary" data-filter=".SEL">Science & Engineering Libraries</button>
+			<button class="button btn btn-default btn-primary" data-filter=".UCDP">UC Digital Press</button>
+			<button class="button btn btn-default btn-primary" data-filter=".WINKLER">Winkler Center</button>
+		</div>
 
+		<!--#include virtual="/includes/exhibitsCards.html"-->
 
-      <h4 id="winkler">Winkler Center for the History of Health Professions</h4>
-      <ul>
-        <li><a href="25thGeneralHospital/">25th General Hospital: Courage and Skill in World War II</a></li>
-        <li><a href="http://sabin.uc.edu">Albert Sabin</a></li>
-        <li><a href="winkler/mussey/">Reuben Dimond Mussey: Physician and Surgeon</a></li>
-      </ul>
+		<!--/Container-->
+	</div>
+	<!--#include virtual="/includes/footer.html"-->
+	<script>
+		// setup search
+		function dosearch() {
+			var sf = document.repoSearch;
+			var submitto = sf.sengines.options[sf.sengines.selectedIndex].value + escape(sf.searchterms.value);
+			window.location.href = submitto;
+			return false;
+		}
+		// setup footer
+		$(window).load(function() {
+			var maxHeight = $(.container).height();
+			$(".container").css('height', maxHeight);
+		});
+	</script>
+	<script src="/js/isotope.pkgd.min.js"></script>
+	<script>
+		$(window).load(function() {
+			// init Isotope
+			var $grid = $('.grid1').isotope({
+				itemSelector: '.grid-image-item',
+				layoutMode: 'fitRows'
+			});
 
-      <h4 id="sel">Science and Engineering Libraries</h4>
-      <ul>
-        <li><a href="/armstrong/">Neil Armstrong</a></li>
-      </ul>
+			// shuffle the cards and show titles
+			$grid.isotope('shuffle');
+			/*
+			var mw = window.matchMedia("(max-width: 700px)");
+			if (mw.matches) {
+				$('.image-overlay').css("display", "block")
+			}*/
+			$('.image-overlay').css("display", "block")
 
-      <h4 id="ucdp">University of Cincinnati Digital Press</h4>
-      <p><small>The following online exhibits were developed by the University of Cincinnati Digital Press in collaboration with institutions in the Cincinnati area. They represent part of the effort which resulted in the monograph publication <em><a href="http://www.ohioswallow.com/book/Art+As+Image" target="_blank">Art as Image:  Prints and Promotion in Cincinnati, Ohio.</a></em> The print publication has a supplement which appears as a separate <a href="/ArtAsImage/" target="_blank">online publication</a>.</small></p>
-      <ul>
-        <li><a href="/napc99/OMIExhibit/">Images of Progress</a></li>
-        <li><a href="/napc99/PlayingCardsExhibit/">Promotion Through Playing Cards</a></li>
-        <li><a href="/napc99/CincinnatiHistoricalSociety/">Cincinnati Prints at the Cincinnati Historical Society Library</a></li>
-        <li><a href="/napc99/Plchc/">Images From Collections of The Public Library of Cincinnati and Hamilton County</a></li>
-      </ul>
+			// filter functions
+			var filterFns = {
+				// show if number is greater than 50
+				numberGreaterThan50: function() {
+					var number = $(this).find('.number').text();
+					return parseInt(number, 10) > 50;
+				},
+				// show if name ends with -ium
+				ium: function() {
+					var name = $(this).find('.name').text();
+					return name.match(/ium$/);
+				}
+			};
 
-    <!--End col-md-9-->  
-   	</div>
-  <!--End Row-->
-  </div>
-  <!--#include virtual="/includes/footer.html"-->
-<!--End Container-->
-</div>
+			// bind filter button click
+			$('.filters-button-group1').on('click', 'button', function() {
+				var filterValue = $(this).attr('data-filter');
+				// use filterFn if matches value
+				filterValue = filterFns[filterValue] || filterValue;
+				$grid.isotope({
+					filter: filterValue
+				});
 
-<!--#include virtual="/includes/scripts.html"-->
+			});
+
+			// change is-checked class on buttons
+			$('.button-group').each(function(i, buttonGroup) {
+				var $buttonGroup = $(buttonGroup);
+				$buttonGroup.on('click', 'button', function() {
+					$buttonGroup.find('.is-checked').removeClass('is-checked');
+					$(this).addClass('is-checked');
+				});
+
+			});
+
+			// remove filters and show all in clicking a new tab
+			$(".nav-tabs a").click(function() {
+				$(this).tab('show');
+				$grid.isotope({
+					filter: '*'
+				});
+				$('.button-group').each(function(i, buttonGroup) {
+					var $buttonGroup = $(buttonGroup);
+					$buttonGroup.find('.is-checked').removeClass('is-checked');
+					$('#show1').addClass('is-checked');
+					$('#show2').addClass('is-checked');
+					$('#show3').addClass('is-checked');
+				});
+			});
+
+			$grid.isotope('shuffle');
+			var mw = window.matchMedia("(max-width: 700px)");
+			if (mw.matches) {
+				$('.image-overlay').css("display", "block")
+			}
+
+		});
+	</script>
 </body>
+
 </html>
