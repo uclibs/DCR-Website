@@ -6,7 +6,7 @@
 <div id="footnav">
 
 
-<p style="padding: 10px 0px 0px 0px;"><a href="/">Digital Collections Home</a> | <a href="/about/fairUse.html">Fair Use Policy</a> | <a href="/about/contact.html">Help and Feedback</a> |
+<p style="padding: 10px 0px 0px 0px;"><a href="/">Digital Collections Home</a> | <a href="/about/fairUse.html">Fair Use Policy</a> | <a href="https://libraries.uc.edu/about/contact.html">Help and Feedback</a> |
 <a href="https://www.uc.edu/about/policies/non-discrimination.html" target="_blank">Notice of Non-Discrimination</a>
 </p>
   <p id="footnavb"><a target="_self" href="http://www.libraries.uc.edu/">University of Cincinnati Libraries</a></p>
